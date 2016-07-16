@@ -1,0 +1,2 @@
+# CollectionViewMostlyFunctionDemo
+iOS中的CollectionView的主要功能的演示,会提供最全的collectionView学习的demo,有意见的可以提交,共同维护
