@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="JHPublishCell">
+            <rect key="frame" x="0.0" y="0.0" width="119" height="150"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="119" height="150"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" image="publish-audio" translatesAutoresizingMaskIntoConstraints="NO" id="mIA-k5-ZC0">
+                        <rect key="frame" x="0.0" y="0.0" width="119" height="120"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="100" id="CD6-F1-0o8"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="CD6-F1-0o8"/>
+                            </mask>
+                        </variation>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iUZ-AC-tFR">
+                        <rect key="frame" x="0.0" y="120" width="119" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="QRP-WL-gYo"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstItem="mIA-k5-ZC0" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="0HA-rh-Jij"/>
+                <constraint firstAttribute="bottom" secondItem="iUZ-AC-tFR" secondAttribute="bottom" id="9JQ-bd-LxA"/>
+                <constraint firstItem="iUZ-AC-tFR" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="BkW-4G-rkj"/>
+                <constraint firstItem="iUZ-AC-tFR" firstAttribute="top" secondItem="mIA-k5-ZC0" secondAttribute="bottom" id="DR8-y7-vWK"/>
+                <constraint firstAttribute="trailing" secondItem="mIA-k5-ZC0" secondAttribute="trailing" id="HkE-ep-ZAK"/>
+                <constraint firstItem="iUZ-AC-tFR" firstAttribute="top" secondItem="mIA-k5-ZC0" secondAttribute="bottom" id="Qa0-bJ-0QS"/>
+                <constraint firstItem="mIA-k5-ZC0" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Wg0-y7-xbJ"/>
+                <constraint firstAttribute="trailing" secondItem="iUZ-AC-tFR" secondAttribute="trailing" id="zsc-jM-WDM"/>
+            </constraints>
+            <size key="customSize" width="119" height="164"/>
+            <connections>
+                <outlet property="imageView" destination="mIA-k5-ZC0" id="PTe-Qd-jba"/>
+                <outlet property="titleLabel" destination="iUZ-AC-tFR" id="iII-W3-5lP"/>
+            </connections>
+            <point key="canvasLocation" x="314.5" y="325"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="publish-audio" width="72" height="72"/>
+    </resources>
+</document>

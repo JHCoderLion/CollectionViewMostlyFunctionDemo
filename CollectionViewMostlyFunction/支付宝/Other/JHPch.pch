@@ -1,0 +1,63 @@
+//
+//  JHPch.pch
+//  支付宝
+//
+//  Created by 赖锦浩 on 16/4/20.
+//  Copyright © 2016年 赖锦浩. All rights reserved.
+//
+
+
+#ifndef JHPch_pch
+#define JHPch_pch
+
+
+#import "SDImageCache.h"
+#import "Masonry.h"
+#import "UIView+JHExtension.h"
+#import "NSString+JHExtension.h"
+#import "JHGuideTool.h"
+#import "JHPushAnimation.h"
+#import "UIColor+HexColor.h"
+
+//日志输出
+#ifdef DEBUG  //log
+#define JHLog(...) NSLog(__VA_ARGS__)
+// 方法输出
+#define JHLogFunc JHLog(@"%s", __func__)
+/** 输出组行 */
+#define JHLogIndexPath JHLog(@"第%zd组------第%zd行",indexPath.section,indexPath.row);
+#else // 发布阶段-上线阶段:移除Log
+#define JHLog(...)
+#endif
+
+/** 将服务器返回的数据写成plist */
+#define JHAFNWriteToPlist(filename) [responseObject writeToFile:[NSString stringWithFormat:@"/Users/laijinhao/Desktop/%@.plist", filename] atomically:YES];
+
+//新特性界面跳转的通知
+#define kNewFeatureNotify @"newFeature2TabBar"
+
+//屏幕的高度和宽度
+#define ScreenWidth [UIScreen mainScreen].bounds.size.width
+#define ScreenHeight [UIScreen mainScreen].bounds.size.height
+
+
+
+//颜色
+/** 随机色 */
+#define JHRandomColor JHColor(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255))
+
+#define JHARGBColor(a,r,g,b)  [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)/255.0]
+
+//
+#define JHColor(r,g,b) JHARGBColor(255, (r), (g), (b))
+
+//灰色
+#define JHGrayColor(v) JHColor((v),(v),(v))
+#define JHCommonBgColor JHGrayColor(215);
+
+// 快速创建弱指针
+#define __weakSelf __weak typeof(self) weakSelf = self;
+
+
+
+#endif

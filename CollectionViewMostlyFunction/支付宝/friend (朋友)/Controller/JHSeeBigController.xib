@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="JHSeeBigController">
+            <connections>
+                <outlet property="view" destination="iN0-l3-epB" id="f24-iu-l4b"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yN9-7c-yA1" userLabel="退出按钮">
+                    <rect key="frame" x="30" y="30" width="21" height="22"/>
+                    <state key="normal" image="icon_image_delete"/>
+                    <connections>
+                        <action selector="backClick:" destination="-1" eventType="touchUpInside" id="XBd-zp-p3r"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zcP-rI-DAe" userLabel="保存按钮">
+                    <rect key="frame" x="305" y="597" width="30" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="8WU-YS-YUv"/>
+                        <constraint firstAttribute="height" constant="30" id="ITo-vZ-T3F"/>
+                    </constraints>
+                    <state key="normal" image="pulldown_bg"/>
+                    <connections>
+                        <action selector="saveClick:" destination="-1" eventType="touchUpInside" id="1N3-8x-nQh"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="yN9-7c-yA1" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="DMz-Uo-8I2"/>
+                <constraint firstAttribute="trailing" secondItem="zcP-rI-DAe" secondAttribute="trailing" constant="50" id="OFJ-FC-nlg"/>
+                <constraint firstAttribute="bottom" secondItem="zcP-rI-DAe" secondAttribute="bottom" constant="40" id="PCi-43-hzI"/>
+                <constraint firstAttribute="bottom" secondItem="zcP-rI-DAe" secondAttribute="bottom" constant="50" id="SVc-pr-E71"/>
+                <constraint firstAttribute="trailing" secondItem="zcP-rI-DAe" secondAttribute="trailing" constant="40" id="pAH-3c-jD0"/>
+                <constraint firstItem="yN9-7c-yA1" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="30" id="ymN-fy-dKu"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="OFJ-FC-nlg"/>
+                    <exclude reference="SVc-pr-E71"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="83.5" y="357.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_image_delete" width="21" height="21"/>
+        <image name="pulldown_bg" width="145" height="145"/>
+    </resources>
+</document>
